@@ -5,18 +5,16 @@ import time
 import psutil
 import os
 
-if len(sys.argv) != 3:
-    print("Usage: sort_ray.py <num_workers> <input_path>")
+if len(sys.argv) != 2:
+    print("Usage: sort_ray.py <input_path>")
     sys.exit(1)
 
-num_workers = int(sys.argv[1])
-input_path = sys.argv[2]
+input_path = sys.argv[1]
 
 ray.init()
 
 ctx = ray.data.DataContext.get_current()
 ctx.use_push_based_shuffle = True
-ctx.execution_options.resource_limits.cpu = num_workers
 
 hdfs_fs = fs.HadoopFileSystem.from_uri("hdfs://okeanos-master:54310")
 
@@ -39,6 +37,6 @@ cpu_end = psutil.cpu_times_percent()
 mem_end = process.memory_info().rss
 
 print("Stats:", ds.materialize().stats())
-print(f"⏱Total Runtime: {end_time - start_time:.2f} seconds")
+print(f"Total Runtime: {end_time - start_time:.2f} seconds")
 print(f"Peak Heap Memory (Process RSS): {(mem_end / 1024**2):.2f} MB")
 print(f"CPU Times % (user/system): {cpu_end.user:.1f}% / {cpu_end.system:.1f}%")
