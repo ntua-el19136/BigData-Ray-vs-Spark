@@ -49,4 +49,4 @@ Implemented complete training and hyperparameter tuning workflows for two differ
    
 **Energy consumption prediction using the ASHRAE dataset:**
 
-Distributed preprocessing, training, and hyperparameter tuning on tabular sensor data
+- Distributed preprocessing, training, and hyperparameter tuning on tabular sensor data
