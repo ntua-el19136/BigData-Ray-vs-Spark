@@ -84,7 +84,7 @@ if __name__ == "__main__":
 
     total_time = time.time() - start
 
-    print("✅ BEST RESULT CONFIG:", best_result.config)
-    print("🏆 BEST RESULT METRICS:", best_result.metrics)
-    print("⏱ Preprocessing time:", preprocessing_time)
-    print("⏱ Total time:", total_time)
+    print("BEST RESULT CONFIG:", best_result.config)
+    print("BEST RESULT METRICS:", best_result.metrics)
+    print("Preprocessing time:", preprocessing_time)
+    print("Total time:", total_time)
