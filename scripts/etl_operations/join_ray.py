@@ -29,6 +29,6 @@ joined = ds1.map_batches(join_func, batch_format="pandas")
 print("Join ολοκληρώθηκε. Δείγμα:")
 print(joined.show(5))
 
-print("Στατιστικά joined dataset:")
+print("Joined dataset stats:")
 joined = joined.materialize()
 print(joined.stats())
