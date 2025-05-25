@@ -48,5 +48,3 @@ Implemented complete training and hyperparameter tuning workflows for two differ
     - Spark with MLlib
    
 **Energy consumption prediction using the ASHRAE dataset (distributed preprocessing, training, and hyperparameter tuning on tabular sensor data)**
-
-These experiments aimed to evaluate runtime efficiency, tuning flexibility, and final model performance (accuracy and AUC) across different data sizes and cluster configurations.
