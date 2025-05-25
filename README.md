@@ -82,14 +82,26 @@ $SPARK_HOME/sbin/start-history-server.sh
 ```
 
 **Ray (Head Node):**
-<pre> ```bash ray start --head --node-ip-address=[head-node-private-ip-address] --port=6379 --dashboard-host=0.0.0.0 --object-store-memory=2147483648 --system-config='{"automatic_object_spilling_enabled": true, "object_spilling_threshold": 0.8}'``` </pre>
+
+```bash
+ray start --head --node-ip-address=[head-node-private-ip-address] --port=6379 --dashboard-host=0.0.0.0 --object-store-memory=2147483648 --system-config='{"automatic_object_spilling_enabled": true, "object_spilling_threshold": 0.8}'
+```
 
 **Ray (Worker Nodes):**
-<pre> ```ray start --address=[head-node-private-ip-address]``` </pre>
+
+```bash
+ray start --address=[head-node-private-ip-address]
+```
 
 ## **How to Run Experiments**
 **Spark Scripts**
-<pre> ```spark-submit --packages "ch.cern.sparkmeasure:spark-measure_2.12:0.23" <script_folder>/<script> <num_executors> <hdfs:filepath>``` </pre>
+
+```bash
+spark-submit --packages "ch.cern.sparkmeasure:spark-measure_2.12:0.23" <script_folder>/<script> <num_executors> <hdfs:filepath>
+```
 
 **Ray Scripts**
-<pre> ```python3 <script_folder>/<script>.py <hdfs:filepath>``` </pre>
+
+```bash
+python3 <script_folder>/<script>.py <hdfs:filepath>
+```
