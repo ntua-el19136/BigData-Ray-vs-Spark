@@ -76,8 +76,8 @@ cv_model = crossval.fit(train)
 predictions = cv_model.transform(test)
 accuracy = evaluator.evaluate(predictions)
 
-print("✅ BEST MODEL ACCURACY:", accuracy)
-print("✅ BEST PARAMETERS:", cv_model.bestModel.extractParamMap())
-print("⏱ Total time:", time.time() - start_time)
+print("BEST MODEL ACCURACY:", accuracy)
+print("BEST PARAMETERS:", cv_model.bestModel.extractParamMap())
+print("Total time:", time.time() - start_time)
 
 spark.stop()
