@@ -1,5 +1,5 @@
 In here there are scripts that accurately predict the energy usage of over 1,000 buildings over a three-year timeframe, based on information about the building themselves
-and the observed weather in the correspoding areas, that can be found here: [https://www.kaggle.com/competitions/ashrae-energy-prediction/data]. To run the scripts:
+and the observed weather in the correspoding areas, that can be found here: https://www.kaggle.com/competitions/ashrae-energy-prediction/data. To run the scripts:
 
 
 ## **Ray**
