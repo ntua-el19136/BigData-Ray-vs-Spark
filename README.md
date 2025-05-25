@@ -42,7 +42,7 @@ Implemented complete training and hyperparameter tuning workflows for two differ
 
     - Spark with MLlib's pipeline-based tuning
 
-  - ## Random Forest Classifiers using:
+  - #### Random Forest Classifiers using:
 
     - Ray with Scikit-learn (via Ray Train/Tune)
 
