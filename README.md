@@ -21,15 +21,15 @@ All tasks were executed on datasets ranging from 2 GB to 8 GB in size — beyond
 
 ## **Evaluated Tasks**
 
-**ETL Operations on Big Datasets (CSVs)**
+**ETL Operations on Big Datasets (CSVs):**
 - Benchmarked aggregate, transform, load, sort operations on large CSV files.
 - Focused on processing speed, cluster resource utilization, and scalability.
 
-**Graph Operations (PageRank, Triangle Counting)**
+**Graph Operations (PageRank, Triangle Counting):**
 - Implemented PageRank to identify top-ranking nodes across various graph sizes.
 - Performed triangle counting to evaluate performance on local graph computations.
 
-**ML Operations and Pipelines**
+**ML Operations and Pipelines:**
 - **K-Means Clustering**
   - Applied K-means on large datasets to compare clustering performance and runtime across frameworks.
 
@@ -47,4 +47,5 @@ Implemented complete training and hyperparameter tuning workflows for two differ
     - Ray with Scikit-learn (via Ray Train/Tune)
     - Spark with MLlib
    
-**Energy consumption prediction using the ASHRAE dataset**: distributed preprocessing, training, and hyperparameter tuning on tabular sensor data
+**Energy consumption prediction using the ASHRAE dataset:**
+Distributed preprocessing, training, and hyperparameter tuning on tabular sensor data
