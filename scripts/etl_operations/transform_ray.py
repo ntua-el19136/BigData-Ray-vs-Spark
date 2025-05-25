@@ -37,6 +37,6 @@ ds.show(5)
 print("Row count:", ds.count())
 
 end_time = time.time()
-print(f"Total runtime: {end_time - start_time:.2f} δευτερόλεπτα")
+print(f"Total runtime: {end_time - start_time:.2f} seconds.")
 
 print(ds.stats())
