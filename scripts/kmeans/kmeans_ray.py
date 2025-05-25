@@ -13,8 +13,6 @@ parser.add_argument("hdfs_path", help="Path to CSV in HDFS")
 parser.add_argument("--k", type=int, default=2, help="Number of clusters")
 args = parser.parse_args()
 
-print(f"🔄 Reading file from HDFS: {args.hdfs_path}")
-
 # --- Init Ray ---
 ray.init(address="auto")
 
@@ -24,7 +22,7 @@ ds = ray.data.read_csv(args.hdfs_path, filesystem=hdfs)
 df = ds.to_pandas()
 features = df.select_dtypes(include=[np.number])
 if features.shape[1] == 0:
-    print("❌ No numeric columns to cluster on.")
+    print("No numeric columns to cluster on.")
     exit(1)
 
 ds = ray.data.from_pandas(features)
@@ -48,7 +46,7 @@ elapsed = end_time - start_time
 from collections import Counter
 counts = Counter(clusters)
 
-print("\n✅ KMeans Clustering Report")
+print("\nKMeans Clustering Report")
 print(f"Total rows         : {X.shape[0]}")
 print(f"Number of features : {X.shape[1]}")
 print(f"Clusters (k)       : {args.k}")
