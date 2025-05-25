@@ -19,7 +19,7 @@ The goal of this project is to evaluate and compare the performance and scalabil
 
 All tasks were executed on datasets ranging from 2 GB to 8 GB in size — beyond the capacity of a single machine’s memory — using a 3-node cluster (each VM equipped with 4 CPUs and 8 GB RAM).
 
-## **Evaluated Tasks**
+## **Evaluation Tasks**
 
 **ETL Operations on Big Datasets (CSVs):**
 - Benchmarked aggregate, transform, load, sort operations on large CSV files.
