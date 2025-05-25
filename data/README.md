@@ -4,3 +4,6 @@ This folder contains a script for generating large-scale classification datasets
 
 Use the script with:
 
+```bash
+./generate_data_to_hdfs.sh <num_samples> </path/in/hdfs.csv>
+```
