@@ -86,9 +86,9 @@ if __name__ == "__main__":
     predictions = best_model.transform(val_df)
     auc = evaluator.evaluate(predictions)
 
-    print("\n✅ Best Model Parameters:")
+    print("\nBest Model Parameters:")
     print(best_model.stages[-1].extractParamMap())
-    print(f"📈 Validation AUC: {auc:.4f}")
-    print(f"⏱️ Total execution time: {time.time() - start_time:.2f} seconds")
+    print(f"Validation AUC: {auc:.4f}")
+    print(f"Total execution time: {time.time() - start_time:.2f} seconds")
 
     spark.stop()
