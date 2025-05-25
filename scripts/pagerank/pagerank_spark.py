@@ -49,13 +49,13 @@ patience = 20
 while patience > 0:
     try:
         stagemetrics.print_memory_report()
-        print("✅ Memory report printed.")
+        print("Memory report printed.")
         break
     except:
-        print("⌛ Waiting for memory report...")
+        print("Waiting for memory report...")
         time.sleep(1)
         patience -= 1
 else:
-    print("❌ Memory report never ready.")
+    print("Memory report never ready.")
 
 sc.stop()
