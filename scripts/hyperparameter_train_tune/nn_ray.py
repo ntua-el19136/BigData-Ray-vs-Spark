@@ -141,9 +141,9 @@ if __name__ == "__main__":
     results = tuner.fit()
     best_result = results.get_best_result(metric="auc", mode="max")
 
-    print("\n✅ Best Config:")
+    print("\nBest Config:")
     print(best_result.config)
-    print(f"📈 Best AUC: {best_result.metrics['auc']:.4f}")
-    print(f"⏱️ Total runtime: {time.time() - start_time:.2f} seconds")
+    print(f"Best AUC: {best_result.metrics['auc']:.4f}")
+    print(f"Total runtime: {time.time() - start_time:.2f} seconds")
 
     ray.shutdown()
