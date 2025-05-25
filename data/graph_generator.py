@@ -33,6 +33,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     if G.number_of_edges() == 0:
-        print("❌ Generated graph has no edges.", file=sys.stderr)
+        print("Generated graph has no edges.", file=sys.stderr)
         sys.exit(2)
     nx.write_edgelist(G, sys.stdout.buffer, delimiter="\t", data=False)
