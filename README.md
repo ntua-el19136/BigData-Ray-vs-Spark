@@ -1,6 +1,6 @@
 # **NTUA-BigData-Ray-vs-Spark**
 
-## **Comparison of Python's Scaling Frameworks: Ray vs. Apache Spark**
+### **Comparison of Python's Scaling Frameworks: Ray vs. Apache Spark**
 
 **Analysis and Design of Information Systems – Team 27**
 
