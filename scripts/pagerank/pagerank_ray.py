@@ -20,12 +20,8 @@ lines = [
 ]
 edges_list = [{'FromNode': t[0], 'ToNode': t[1]} for t in lines]
 
-if not edges_list:
-    print("❌ No edges found. Exiting.")
-    exit(1)
-
-print(f"✅ Loaded {len(edges_list)} edges from {args.hdfs_path}")
-print(f"▶ Sample edge: {edges_list[0]}")
+print(f"Loaded {len(edges_list)} edges from {args.hdfs_path}")
+print(f"Sample edge: {edges_list[0]}")
 
 ray.init(ignore_reinit_error=True)
 
@@ -48,7 +44,7 @@ unioned = from_nodes.union(to_nodes)
 all_nodes = unioned.groupby("Node").count().drop_columns(["count()"])
 
 N = all_nodes.count()
-print(f"📦 Total nodes: {N}")
+print(f"Total nodes: {N}")
 
 # Initialize PageRank
 nodes = all_nodes.add_column("PageRank", lambda df: np.ones(len(df)))
@@ -65,7 +61,7 @@ num_iters = 10
 
 # PageRank Iterations
 for i in range(num_iters):
-    print(f"🔁 Iteration {i+1}/{num_iters}")
+    print(f"Iteration {i+1}/{num_iters}")
 
     def join_with_node_info(batch: pd.DataFrame) -> pd.DataFrame:
         batch = batch.merge(nodes_df, how="left", left_on="FromNode", right_on="Node").drop(columns=["Node"])
@@ -95,10 +91,10 @@ for i in range(num_iters):
     nodes_df = nodes.to_pandas()
 
 nodes = nodes.sort("PageRank", descending=True)
-print("\n📈 Top 10 nodes by PageRank:")
+print("\nTop 10 nodes by PageRank:")
 nodes.show(10)
 
 end_time = time.time()
-print(f"\n⏱ Total execution time: {end_time - start_time:.2f} seconds")
+print(f"\nTotal execution time: {end_time - start_time:.2f} seconds")
 cpu_percent = psutil.cpu_percent(interval=1)
-print(f"🧠 CPU usage (local): {cpu_percent}%")
+print(f"CPU usage (local): {cpu_percent}%")
