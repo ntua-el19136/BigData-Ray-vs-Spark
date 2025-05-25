@@ -36,7 +36,7 @@ All tasks were executed on datasets ranging from 2 GB to 8 GB in size — beyond
 - **Hyperparameter Training and Tuning**
 Implemented complete training and hyperparameter tuning workflows for two different models:
 
-  - ### Neural Networks using:
+  - #### Neural Networks using:
 
     - Ray with PyTorch and Ray Tune
 
