@@ -38,7 +38,7 @@ end_time = time.time()
 cpu_end = psutil.cpu_times_percent()
 mem_end = process.memory_info().rss
 
-print("📊 Stats:", ds.materialize().stats())
-print(f"⏱️ Total Runtime: {end_time - start_time:.2f} seconds")
-print(f"🧠 Peak Heap Memory (Process RSS): {(mem_end / 1024**2):.2f} MB")
-print(f"🧮 CPU Times % (user/system): {cpu_end.user:.1f}% / {cpu_end.system:.1f}%")
+print("Stats:", ds.materialize().stats())
+print(f"⏱Total Runtime: {end_time - start_time:.2f} seconds")
+print(f"Peak Heap Memory (Process RSS): {(mem_end / 1024**2):.2f} MB")
+print(f"CPU Times % (user/system): {cpu_end.user:.1f}% / {cpu_end.system:.1f}%")
