@@ -5,9 +5,9 @@
 **Analysis and Design of Information Systems – Team 27**
 
 ## Researchers
-- Athanasios Bitsanis – 03119136 – ntua-el19136
+- Athanasios Bitsanis – 03119136
 
-- Stefanos Theos – 03119219 – ntua-el19219
+- Stefanos Theos – 03119219
 
 ## **Project Overview**
 
