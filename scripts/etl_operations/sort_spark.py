@@ -39,10 +39,10 @@ print("🔢 Count after sort:", count)
 stagemetrics.print_report()
 metrics = stagemetrics.aggregate_stagemetrics()
 
-print(f"⏱️ Total Runtime: {end_time - start_time:.2f} seconds")
-print(f"🧠 Peak Heap Memory: {metrics.get('Peak JVM memory', 'N/A')} MB")
-print(f"🧮 Total CPU Time: {metrics.get('executorCpuTime', 'N/A')} ms")
-print(f"📌 Total Tasks: {metrics.get('numTasks', 'N/A')}")
+print(f"⏱Total Runtime: {end_time - start_time:.2f} seconds")
+print(f"Peak Heap Memory: {metrics.get('Peak JVM memory', 'N/A')} MB")
+print(f"Total CPU Time: {metrics.get('executorCpuTime', 'N/A')} ms")
+print(f"Total Tasks: {metrics.get('numTasks', 'N/A')}")
 
 patience = 20
 while patience > 0:
