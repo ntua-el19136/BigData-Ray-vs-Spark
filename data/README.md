@@ -20,9 +20,9 @@ Use the script with:
 
 ## **ASHRAE Energy Consumption Prediction Dataset**
 
-The official information for the buildings and the observed weather which was necessary for the prediction was found [here](https://www.kaggle.com/competitions/ashrae-energy-prediction/overview).
+The official information for the buildings and the observed weather which was necessary for the prediction was found on [Kaggle](https://www.kaggle.com/competitions/ashrae-energy-prediction/overview).
 
-**Steps to Load the Dataset into HDFS:**
+## #**Steps to Load the Dataset into HDFS:**
 1. Download the dataset zip directly to HDFS using the following command:
 
 ```bash
