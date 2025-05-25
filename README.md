@@ -54,7 +54,8 @@ Implemented complete training and hyperparameter tuning workflows for two differ
 ## **Requirements**
 Each VM should have a Python virtual environment set up. Install dependencies with:
 
-<pre> ```bash pip install -r requirements.txt``` </pre>
+```bash
+pip install -r requirements.txt
 
 To install additional Ray components:
 
