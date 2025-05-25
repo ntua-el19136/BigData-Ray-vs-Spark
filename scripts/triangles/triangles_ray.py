@@ -11,13 +11,8 @@ if len(sys.argv) != 3:
 num_chunks = int(sys.argv[1])
 hdfs_path = sys.argv[2]
 
-print(f"🔄 Reading graph from: {hdfs_path}")
 cat = subprocess.Popen(["hadoop", "fs", "-cat", hdfs_path], stdout=subprocess.PIPE)
 lines = [line.decode().strip() for line in cat.stdout if not line.startswith(b"#") and '\t' in line.decode()]
-
-if not lines:
-    print("❌ No valid edges found in the file.")
-    exit(1)
 
 # --- Parse to NetworkX graph ---
 G = nx.parse_edgelist(lines, delimiter='\t', nodetype=int, create_using=nx.DiGraph()).to_undirected()
