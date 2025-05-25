@@ -54,11 +54,11 @@ Implemented complete training and hyperparameter tuning workflows for two differ
 ## **Requirements**
 Each VM should have a Python virtual environment set up. Install dependencies with:
 
-<pre> ```pip install -r requirements.txt``` </pre>
+<pre> pip install -r requirements.txt </pre>
 
 To install additional Ray components:
 
-<pre> ```pip install ray[core,data,train,tune]``` </pre>
+<pre> pip install ray[core,data,train,tune] </pre>
 
 ## **Installation**
 To configure HDFS, YARN, and Spark, we followed the setup guide from the NTUA Advanced Databases course:
