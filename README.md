@@ -68,7 +68,7 @@ pip install ray[core,data,train,tune]
 ## **Installation**
 To configure HDFS, YARN, and Spark, we followed the setup guide from the NTUA Advanced Databases course:
 
-Hadoop  and Spark Setup Guide (Colab)
+[Hadoop  and Spark Setup Guide (Colab)](https://colab.research.google.com/drive/1pjf3Q6T-Ak2gXzbgoPpvMdfOHd1GqHZG?usp=sharing#scrollTo=AVipleZma-DY)
 
 Ray setup only requires Python packages and does not depend on external services.
 
