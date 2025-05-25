@@ -50,3 +50,38 @@ Implemented complete training and hyperparameter tuning workflows for two differ
 **Energy consumption prediction using the ASHRAE dataset:**
 
 - Distributed preprocessing, training, and hyperparameter tuning on tabular sensor data
+
+## **Requirements**
+Each VM should have a Python virtual environment set up. Install dependencies with:
+
+<pre> ```pip install -r requirements.txt``` </pre>
+
+To install additional Ray components:
+
+<pre> ```pip install ray[core,data,train,tune]``` </pre>
+
+## **Installation**
+To configure HDFS, YARN, and Spark, we followed the setup guide from the NTUA Advanced Databases course:
+
+Hadoop  and Spark Setup Guide (Colab)
+
+Ray setup only requires Python packages and does not depend on external services.
+
+##  **Cluster Setup**
+**Spark (Head Node):**
+<pre> ```start-dfs.sh
+start-yarn.sh
+$SPARK_HOME/sbin/start-history-server.sh``` </pre>
+
+**Ray (Head Node):**
+<pre> ```ray start --head --node-ip-address=[head-node-private-ip-address] --port=6379 --dashboard-host=0.0.0.0 --object-store-memory=2147483648 --system-config='{"automatic_object_spilling_enabled": true, "object_spilling_threshold": 0.8}'``` </pre>
+
+**Ray (Worker Nodes):**
+<pre> ```ray start --address=[head-node-private-ip-address]``` </pre>
+
+## **How to Run Experiments**
+**Spark Scripts**
+<pre> ```spark-submit --packages "ch.cern.sparkmeasure:spark-measure_2.12:0.23" <script_folder>/<script> <num_executors> <hdfs:filepath>``` </pre>
+
+**Ray Scripts**
+<pre> ```python3 <script_folder>/<script>.py <hdfs:filepath>``` </pre>
