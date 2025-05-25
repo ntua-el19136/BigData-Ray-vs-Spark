@@ -47,4 +47,4 @@ Implemented complete training and hyperparameter tuning workflows for two differ
     - Ray with Scikit-learn (via Ray Train/Tune)
     - Spark with MLlib
    
-**Energy consumption prediction using the ASHRAE dataset (distributed preprocessing, training, and hyperparameter tuning on tabular sensor data)**
+**Energy consumption prediction using the ASHRAE dataset**: distributed preprocessing, training, and hyperparameter tuning on tabular sensor data
