@@ -35,11 +35,11 @@ count = sorted_df.count()
 stagemetrics.end()
 end_time = time.time()
 
-print("🔢 Count after sort:", count)
+print("Count after sort:", count)
 stagemetrics.print_report()
 metrics = stagemetrics.aggregate_stagemetrics()
 
-print(f"⏱Total Runtime: {end_time - start_time:.2f} seconds")
+print(f"Total Runtime: {end_time - start_time:.2f} seconds")
 print(f"Peak Heap Memory: {metrics.get('Peak JVM memory', 'N/A')} MB")
 print(f"Total CPU Time: {metrics.get('executorCpuTime', 'N/A')} ms")
 print(f"Total Tasks: {metrics.get('numTasks', 'N/A')}")
